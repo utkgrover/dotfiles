@@ -166,9 +166,6 @@ bindsym $mod+d exec dmenu_run
 #locks the screen using i3 lock
 bindsym $mod+shift+x exec i3lock
 
-#setting the wallpaper
-exec feh --bg-scale ~/Pictures/wallpaper1.jpg
-
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +3% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -3% #decrease sound volume
@@ -186,3 +183,8 @@ bindsym XF86AudioPrev exec playerctl previous
 
 #to prevent errors with firefox save pop ups
 for_window [class="Firefox"] floating disable
+
+
+#stuff that needs to be done everytime i3 restarts 
+#setting the wallpaper
+exec_always ~/Projects/scripts/wallpaper.sh
